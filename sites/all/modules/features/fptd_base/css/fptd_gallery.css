@@ -1,0 +1,27 @@
+.field-name-field-gallery-images {
+  overflow: hidden;
+}
+
+.field-name-field-gallery-images .field-item {
+  float: left;
+  margin-right: 1em;
+  width: 30%; /* Fallback if calc() isn't supported */
+  width: calc(33% - 1em);
+}
+
+.field-name-field-gallery-images .field-item:nth-child(3n+1) {
+  clear: left;
+}
+
+.field-name-field-gallery-images .field-item:nth-child(3n+3) {
+  margin-right: 0;
+}
+
+.field-name-field-gallery-images img {
+  max-width: 100%;
+  height: auto;
+
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
