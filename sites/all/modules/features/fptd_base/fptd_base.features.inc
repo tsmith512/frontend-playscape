@@ -5,6 +5,31 @@
  */
 
 /**
+ * Implements hook_image_default_styles().
+ */
+function fptd_base_image_default_styles() {
+  $styles = array();
+
+  // Exported image style: fptd_image_gallery_full.
+  $styles['fptd_image_gallery_full'] = array(
+    'label' => 'Image Gallery Full',
+    'effects' => array(
+      1 => array(
+        'name' => 'image_scale',
+        'data' => array(
+          'width' => 960,
+          'height' => 960,
+          'upscale' => 0,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
+  return $styles;
+}
+
+/**
  * Implements hook_node_info().
  */
 function fptd_base_node_info() {
