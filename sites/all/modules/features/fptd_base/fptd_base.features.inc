@@ -35,6 +35,21 @@ function fptd_base_image_default_styles() {
     ),
   );
 
+  // Exported image style: fptd_page_header.
+  $styles['fptd_page_header'] = array(
+    'label' => 'Page Header',
+    'effects' => array(
+      2 => array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 960,
+          'height' => 360,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
   return $styles;
 }
 
@@ -47,6 +62,14 @@ function fptd_base_node_info() {
       'name' => t('Gallery'),
       'base' => 'node_content',
       'description' => '',
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'help' => '',
+    ),
+    'page' => array(
+      'name' => t('Basic page'),
+      'base' => 'node_content',
+      'description' => t('Use <em>basic pages</em> for your static content, such as an \'About us\' page.'),
       'has_title' => '1',
       'title_label' => t('Title'),
       'help' => '',
