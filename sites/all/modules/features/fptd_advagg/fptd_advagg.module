@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Frontend Playscape AdvAgg feature.
+ */
+
+include_once 'fptd_advagg.features.inc';
