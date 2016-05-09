@@ -87,6 +87,15 @@ function corporateclean_process_page(&$variables) {
   if (module_exists('color')) {
     _color_page_alter($variables);
   }
+
+  $critical_css_options = array(
+    'type' => 'inline',
+    'scope' => 'header',
+    'group' => CSS_SYSTEM,
+    'weight' => -1000,
+    'preproces' => FALSE,
+  );
+  drupal_add_css(file_get_contents(drupal_get_path('theme', 'corporateclean') . '/css/critical.css'), $critical_css_options);
  
 }
 
