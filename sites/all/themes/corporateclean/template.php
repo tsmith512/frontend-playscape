@@ -87,6 +87,19 @@ function corporateclean_process_page(&$variables) {
   if (module_exists('color')) {
     _color_page_alter($variables);
   }
+
+  if (drupal_is_front_page()) {
+    $element = array(
+      '#type' => 'html_tag',
+      '#tag' => 'link',
+      '#attributes'=> array(
+        'href' => '/content/sample-image-gallery',
+        'rel' => 'prerender',
+      )
+    );
+
+    drupal_add_html_head($element, 'prerender_home');
+  }
  
 }
 
